@@ -1,23 +1,16 @@
-package org.opencart.stepdefs;
+package stepdefinition;
 
+import base.BaseTest;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.opencart.pages.LoginPage;
-import org.opencart.pages_pf.Loginpage_pf;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-
-public class loginpagestepdefs_pf {
+public class loginpagestepdefs {
 
     WebDriver driver = new ChromeDriver();
-   Loginpage_pf loginpage_pf = new Loginpage_pf(driver);
+    org.opencart.pages_pf.Loginpage loginpage_pf = new org.opencart.pages_pf.Loginpage(driver);
 
     @Given("I am on the open cart login page")
     public void i_am_on_the_open_cart_login_page() throws InterruptedException {
@@ -37,8 +30,6 @@ public class loginpagestepdefs_pf {
 
         loginpage_pf.enterUserName(username);
         loginpage_pf.enterPassword(password);
-
-
     }
 
 

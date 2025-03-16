@@ -1,6 +1,5 @@
 package org.opencart.pages_pf;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Loginpage_pf {
+public class Loginpage {
 
     //1. locators
     //2. methods
@@ -32,7 +31,7 @@ public class Loginpage_pf {
     @FindBy(xpath = "//ul//li//a[text()='Login']")
     WebElement loginBtn;
 
-    public Loginpage_pf(WebDriver driver){
+    public Loginpage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
 

@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
         features = {"src/test/resources/features/Loginpage.feature"},
-        glue = {"org.opencart.stepdefs"}
+        glue = {"stepdefinition"}
 )
 public class TestRunner {
 
